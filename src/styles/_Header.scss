@@ -1,0 +1,19 @@
+.header {
+    height: 10rem;
+    background-image: linear-gradient(to right , rgba(purple , 0.6) , rgba(rgb(196, 61, 196) , .5)) , url("../img/mount.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    padding-top: 4rem;
+    color: #fff;
+
+    &__day {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+
+    &__date {
+        font-size: 1.2rem;
+        color: lightgray;
+    }
+}

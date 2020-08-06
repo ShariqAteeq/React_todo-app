@@ -4,6 +4,24 @@
     align-items: center;
     padding: .65rem 1rem;
     cursor: pointer;
+    justify-content: space-between;
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__no {
+        font-size: .8rem;
+        color: #606060;
+        font-weight: 600;
+    }
+
+    &.selected{
+        font-weight: 500 !important;
+        background-color: rgb(212, 93, 212);
+    
+    }
 
     &:hover {
         font-weight: 500 !important;

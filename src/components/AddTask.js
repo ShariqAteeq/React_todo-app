@@ -1,22 +1,34 @@
-import React , {useState} from 'react';
+import React , {useState , useContext} from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import AddIcon from '@material-ui/icons/Add';
+import {GlobalContext} from '../Context/GLobalState';
 
 const AddTask = () => {
     
     const [open, setOpen] = useState(false);
+    const [task , setTask] = useState("");
+    const [category, setCategory] = useState("");
 
+    const {addTask} = useContext(GlobalContext);
+    
     const handleClickOpen = () => {
             setOpen(true);
         };
 
-    const handleClose = () => {
+    const handleClose = (e) => {
+          e.preventDefault();
+            
+
+            const newTask = {
+                id: Math.floor(Math.random() * 10000),
+                name: task,
+                category      
+            }
+
+            addTask(newTask);
             setOpen(false);
        };
 
@@ -25,28 +37,26 @@ const AddTask = () => {
       <Button variant="outlined" color="primary" onClick={handleClickOpen} className = "addTask__btn">
         <AddIcon />  NEW TO-DO
       </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" className = "addTask">
+        <h3 className = "addTask__title">Add Task</h3>
         <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
+          <div className = "addTask__inputgrp">
+          <input type = "text" placeholder = "Task Name " 
+                className = "addTask__input" value = {task}
+                onChange = {(e) => setTask(e.target.value)}
+                />
+            <input type = "text" placeholder = "Add category" 
+                  className = "addTask__input" value = {category}
+                  onChange = {(e) => setCategory(e.target.value)}
+                  />
+            </div>   
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} className = "addTask__btn">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
+          <Button onClick={handleClose} className = "addTask__btn">
+            Add
           </Button>
         </DialogActions>
       </Dialog>

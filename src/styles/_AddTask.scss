@@ -1,8 +1,32 @@
 .addTask {
-
     &__btn {
         color: purple !important;
         border: none !important;
         font-weight: 700 !important;
+    }
+
+    &__title {
+        padding: 1rem 1rem 0 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &__input {
+        border: none;
+        border-bottom: 2px solid purple;
+        padding: .5rem 1px;
+        display: block;
+        width: 25rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__inputgrp {
+        padding: 1rem;
     }
 }

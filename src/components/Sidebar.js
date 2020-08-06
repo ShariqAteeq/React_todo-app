@@ -12,10 +12,9 @@ import PlaylistAddRoundedIcon from '@material-ui/icons/PlaylistAddRounded';
 function Sidebar() {
     return (
         <div className = "sidebar">
-            <p>To-do App by Shariq</p>
-            <Avatar alt="Shariq" 
+            <Avatar alt="Shariq" className = "sidebar__avatar"
             src="https://avatars0.githubusercontent.com/u/60320877?s=460&u=906796c37643e73a4b30f69f0cbef62c2d45189e&v=4" />
-            
+            <h4 className = "sidebar__username">Muhammad Shariq</h4>
             <SidebarRow title ="My Day" Icon = {WbSunnyOutlinedIcon}/>
             <SidebarRow title ="Important" Icon = {StarBorderRoundedIcon}/>
             <SidebarRow title ="To-Do" Icon = {PlaylistAddCheckRoundedIcon}/>

@@ -1,0 +1,51 @@
+.task {
+    background-color: #fff;
+    flex: 0.8;
+    border-left: .2px solid lightgray;
+    padding: 1.5rem;
+
+    &__list {
+
+        list-style: none;
+
+    }
+    
+    &__item {
+
+        padding: .4rem;
+        text-transform: uppercase;
+        display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+
+        &-heading {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        &-type {
+            font-size: .6rem;
+            font-weight: 500;
+            padding: .2rem 0;
+            color: #606060;
+        }
+
+        &-delete {
+            color: purple !important;
+        }
+    }
+
+    &__add {
+        display: flex;
+        align-items: center;
+        color: purple !important;
+
+        &-head {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-left: .3rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,5 +1,20 @@
 .sidebar {
-    flex: 0.25;
+    flex: 0.3;
     background-color: #fff;
-    padding : 5rem 0;
+    
+    &__avatar {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
+    &__username {
+        font-size: 1.3rem;
+        text-align: center;
+        font-size: 400;
+        padding: .5rem 2rem;
+        margin-bottom: .5rem;
+    }
+
 }

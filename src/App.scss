@@ -8,6 +8,7 @@
 
 .App {
    width: 50rem;
+   min-height: 35rem;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -16,6 +17,9 @@
     box-shadow: 2rem 2rem 4rem rgba($color: #000000, $alpha: 0.6);
 
    &__tasks {
-        flex: 0.75;
+        flex: 0.7;
+
+        display: flex;
+        flex-direction: column;
    }
 }

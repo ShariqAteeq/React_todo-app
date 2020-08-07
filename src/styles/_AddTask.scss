@@ -5,6 +5,20 @@
         font-weight: 700 !important;
     }
 
+    &__select {
+        width: 25rem;
+        padding: .5rem 1px;
+        border: none;
+        border-bottom: 2px solid purple;
+        font-size: 1rem;
+        color: #292727;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
     &__title {
         padding: 1rem 1rem 0 1rem;
         font-size: 1.2rem;
@@ -17,6 +31,8 @@
         padding: .5rem 1px;
         display: block;
         width: 25rem;
+        font-size: 1rem;
+        color: #292727;
 
         &:not(:last-child) {
             margin-bottom: 1rem;

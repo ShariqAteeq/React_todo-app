@@ -3,19 +3,26 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Task from './components/Task';
 import {ContextProvider} from './Context/GLobalState';
+import {BrowserRouter , Route , Switch} from 'react-router-dom'
 import './App.scss';
 
 function App() {
   return (
+    <div className="App">
+    <BrowserRouter>
     <ContextProvider>
-        <div className="App">
-        <Sidebar />
-        <div className = "App__tasks">
+     <Sidebar />
+      <Switch>
+        <Route path = "/">
+          <div className = "App__tasks">
             <Header />
             <Task />
-        </div>
-      </div>
-    </ContextProvider>
+          </div>
+          </Route>
+      </Switch>
+      </ContextProvider>
+    </BrowserRouter>
+    </div>
   );
 }
 

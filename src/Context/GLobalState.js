@@ -3,10 +3,10 @@ import TaskReducer from './TaskReducer';
 
 const initialState = {
     Tasks : [
-        {id : 1, name : "buy book" , category : "travel"},
-        {id : 2, name : "buy headphone" , category : "travel"},
-        {id : 3, name : "pasta" , category : "groceries"},
-        {id : 4, name : "design logo" , category : "work"}
+        {id : 1, name : "buy book" , category : "Travel"},
+        {id : 2, name : "buy headphone" , category : "Travel"},
+        {id : 3, name : "pasta" , category : "Groceries"},
+        {id : 4, name : "design logo" , category : "Work"}
     ]
 }
 

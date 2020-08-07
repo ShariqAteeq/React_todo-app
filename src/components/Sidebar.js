@@ -18,16 +18,16 @@ function Sidebar() {
     let TravelCount = 0 , WorkCount = 0 , GroCount = 0;
 
     Tasks.map(task => {
-        if(task.category === "work") {
+        if(task.category === "Work") {
             WorkCount++;
         }
-        else if(task.category === "travel") {
+        else if(task.category === "Travel") {
             TravelCount++;
         }
-        else if(task.category === "groceries") {
+        else if(task.category === "Groceries") {
             GroCount++;
         }
-    })
+    });
 
     return (
         <div className = "sidebar">

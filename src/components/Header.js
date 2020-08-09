@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header() {
+function Header({title}) {
 
     let newDate = new Date()
     let date = newDate.getDate();
@@ -16,7 +16,7 @@ function Header() {
 
     return (
         <div className = "header">
-            <h3 className = "header__day">My Day</h3>
+            <h3 className = "header__day">{title}</h3>
             <p className = "header__date">{days[day]}, {date} {monthNames[month]} {year}</p>
         </div>
     )

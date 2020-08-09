@@ -10,7 +10,7 @@ const AddTask = () => {
     
     const [open, setOpen] = useState(false);
     const [task , setTask] = useState("");
-    const [category, setCategory] = useState("Travel");
+    const [category, setCategory] = useState("Work");
 
     const {addTask} = useContext(GlobalContext);
     
@@ -29,7 +29,7 @@ const AddTask = () => {
             }
 
             addTask(newTask);
-            setTask(""); setCategory("");
+            setTask("");
             setOpen(false);
        };
 
@@ -48,13 +48,13 @@ const AddTask = () => {
         <h3 className = "addTask__title">Add Task</h3>
         <DialogContent>
           <div className = "addTask__inputgrp">
-          <input type = "text" placeholder = "Task Name " 
+          <input type = "text" placeholder = "Task Name " required
                 className = "addTask__input" value = {task}
                 onChange = {(e) => setTask(e.target.value)}
                 />
             <select value = {category} onChange = {e => setCategory(e.target.value)} className = "addTask__select">
-                <option className = "addask__opt">Travel</option>
                 <option className = "addask__opt">Work</option>
+                <option className = "addask__opt">Travel</option>
                 <option className = "addask__opt">Groceries</option>
             </select>
             </div>   

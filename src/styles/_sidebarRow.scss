@@ -17,12 +17,6 @@
         font-weight: 600;
     }
 
-    &.selected{
-        font-weight: 500 !important;
-        background-color: rgb(212, 93, 212);
-    
-    }
-
     &:hover {
         font-weight: 500 !important;
         background-color: rgb(212, 93, 212);
@@ -31,4 +25,7 @@
     &__title {
         margin-left: .5rem;
     }
+}
+.selected {
+    background-color: purple;
 }

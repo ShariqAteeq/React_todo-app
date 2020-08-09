@@ -1,6 +1,10 @@
 .sidebar {
     flex: 0.3;
     background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
     &__avatar {
         height: 4.5rem !important;
@@ -14,7 +18,61 @@
         text-align: center;
         font-size: 400;
         padding: .5rem 2rem;
-        margin-bottom: .5rem;
+       // margin-bottom: .5rem;
     }
 
+    &__nav {
+        margin-top: -5rem;
+    }
+
+    &__link {
+
+        &-no {
+            font-size: .8rem;
+            color: #606060;
+            font-weight: 600;
+        }
+
+        &-text {
+            margin-left: .5rem;
+        }
+    }
+
+    &__nav-list {
+        list-style: none;
+    }
+
+    &__nav-link {
+        display: flex;
+        font-size: 1rem !important;
+        align-items: center;
+        padding: .65rem 1rem;
+        cursor: pointer;
+        justify-content: space-between;
+        text-decoration: none;
+        color: black;
+
+        &-active {
+            background-color: rgb(212, 93, 212);
+            font-weight: 500 !important;
+        }
+
+        &:hover {
+            font-weight: 500 !important;
+            background-color: rgb(212, 93, 212);
+        }
+    }
+
+    &__link-name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__legal {
+        font-size: .7rem;
+        color: #606060;
+        font-weight: 600;
+        text-align: center;
+        padding: .5rem 1.5rem;
+    }
 }

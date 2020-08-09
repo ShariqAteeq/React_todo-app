@@ -22,9 +22,6 @@ function Task() {
                     </li>
                 ))}
             </ul>
-            {/* <Button variant="outlined" color="primary" onClick={handleClickOpen} className = "addTask__btn">
-                 <AddIcon />  NEW TO-DO
-            </Button> */}
             <AddTask />
         </div>
     )

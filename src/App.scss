@@ -1,10 +1,12 @@
+$bp-medium : 50em;
+$bp-small : 32.8em;
+
 @import "styles/AddTask";
 @import "styles/button";
 @import "styles/Header";
 @import "styles/sidebar";
 @import "styles/sidebarRow";
 @import "styles/Task";
-
 
 .App {
    width: 50rem;
@@ -16,10 +18,19 @@
     display: flex;
     box-shadow: 2rem 2rem 4rem rgba($color: #000000, $alpha: 0.6);
 
+    @media only screen and (max-width : $bp-medium) {
+       width: 100%;
+       height: 50vh;
+    }
+
    &__tasks {
         flex: 0.7;
 
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width : $bp-small) {
+         flex: 1;
+      }
    }
 }

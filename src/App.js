@@ -40,6 +40,16 @@ function App() {
             <Travel />
           </div>
           </Route>
+          <Route path = "/newlist">
+          <div className = "App__tasks">
+            <Header title = "New List" />
+          </div>
+          </Route>
+          <Route path = "/important">
+          <div className = "App__tasks">
+            <Header title = "Important" />
+          </div>
+          </Route>
       </Switch>
       </ContextProvider>
     </BrowserRouter>

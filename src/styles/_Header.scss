@@ -6,6 +6,11 @@
     padding: 0 1rem;
     padding-top: 4rem;
     color: #fff;
+    position: relative;
+
+    @media only screen and (max-width : $bp-small) {
+        text-align: center;
+     }
 
     &__day {
         font-size: 2.2rem;
@@ -16,4 +21,26 @@
         font-size: 1.2rem;
         color: lightgray;
     }
+
+    &__btn {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 2rem !important;
+        border: none;
+        background: transparent;
+        color: #fff;
+
+        @media only screen and (min-width : $bp-small) {
+            display: none;
+         }
+    }
+}
+.drawerStyle  {
+    width : 0;
+    background-color : #fff;
+
+    @media only screen and (min-width : $bp-small) {
+        display: none;
+     }
 }

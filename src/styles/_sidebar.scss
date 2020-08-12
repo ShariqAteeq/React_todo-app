@@ -6,23 +6,42 @@
     flex-direction: column;
     justify-content: space-between;
     
+    @media only screen and (max-width : $bp-small) {
+        display: none;
+        font-size: 50%;
+     }
+   
     &__avatar {
         height: 4.5rem !important;
         width: 4.5rem !important;
         margin: 0 auto;
         margin-top: 1rem;
+
+        @media only screen and (max-width : $bp-small) {
+            height: 3rem;
+            width: 3rem;
+         }
     }
 
     &__username {
         font-size: 1.3rem;
         text-align: center;
         font-size: 400;
-        padding: .5rem 2rem;
-       // margin-bottom: .5rem;
+        padding: .5rem 3rem;
+
+        @media only screen and (max-width : $bp-small) {
+            padding: .5rem 1rem;
+            width: 70%;
+            margin: 0 auto;
+         }
     }
 
     &__nav {
         margin-top: -5rem;
+
+        @media only screen and (max-width : $bp-small) {
+            margin-top: 1.5rem;
+         }
     }
 
     &__link {
